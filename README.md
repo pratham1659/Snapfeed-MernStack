@@ -35,3 +35,7 @@ npm i -D nodemon
     "start": "node backend/server.js"
   },
 ```
+
+```
+openssl rand -base64 32
+```

@@ -70,6 +70,7 @@ export const followUnfollowUser = async (req, res) => {
         $pull: { following: id },
       });
 
+      // TODO return the id of the users as a response
       res.status(200).json({ message: "User unfollowed successfully" });
     } else {
       //follow the users

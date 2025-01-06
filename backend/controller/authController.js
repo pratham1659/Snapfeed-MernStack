@@ -26,7 +26,7 @@ export const signup = async (req, res) => {
       return res.status(400).json({ error: "Password must be at least 6 character long" });
     }
 
-    const salt = await bcrypt.genSalt(7);
+    const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
     const newUser = new User({

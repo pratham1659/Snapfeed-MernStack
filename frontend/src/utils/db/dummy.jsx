@@ -83,7 +83,7 @@ export const USERS_FOR_RIGHT_PANEL = [
     _id: "1",
     fullName: "John Doe",
     username: "johndoe",
-    profileImg: "/avatars/boy2.png",
+    profileImg: "/.avatars/boy2.png",
   },
   {
     _id: "2",

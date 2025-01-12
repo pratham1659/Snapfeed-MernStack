@@ -1,6 +1,7 @@
 import HomePage from "./pages/home/HomePage";
 import SignupPage from "./pages/auth/SignupPage";
 import Sidebar from "./components/common/Sidebar";
+import { Toaster } from "react-hot-toast";
 import LoginPage from "./pages/auth/LoginPage";
 import { Route, Routes } from "react-router-dom";
 import RightPanel from "./components/common/RightPanel";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/profile/johndoe" element={<ProfilePage />} />
       </Routes>
       <RightPanel />
+      <Toaster />
     </div>
   );
 }

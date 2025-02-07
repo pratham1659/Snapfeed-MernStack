@@ -1,4 +1,4 @@
-# Twitter-MernStack
+# Snapfeed-MernStack
 
 #### To Create a VITE React application
 

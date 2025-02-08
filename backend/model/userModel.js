@@ -9,14 +9,43 @@ const userSchema = new mongoose.Schema(
     },
     fullname: {
       type: String,
-      required: true,
     },
+    email: { type: String, required: true, unique: true },
     password: {
       type: String,
       required: true,
       minLength: true,
     },
-    email: { type: String, required: true, unique: true },
+    profilePicture: {
+      type: String,
+      default: "",
+    },
+    bio: {
+      type: String,
+      default: "",
+    },
+    gender: {
+      type: String,
+      default: "",
+    },
+    link: {
+      type: String,
+      default: "",
+    },
+    posts: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Post",
+        default: [],
+      },
+    ],
+    bookmarks: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Post",
+        default: [],
+      },
+    ],
     followers: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -31,22 +60,6 @@ const userSchema = new mongoose.Schema(
         default: [],
       },
     ],
-    profileImage: {
-      type: String,
-      default: "",
-    },
-    coverImage: {
-      type: String,
-      default: "",
-    },
-    bio: {
-      type: String,
-      default: "",
-    },
-    link: {
-      type: String,
-      default: "",
-    },
     likedPosts: [
       {
         type: mongoose.Schema.Types.ObjectId,
